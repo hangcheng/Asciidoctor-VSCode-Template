@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "asciidoctor.asciidoctor-vscode", // Markdown 预览增强
+    "asciidoctor.asciidoctor-vscode", // Asciidoc 插件
     "hediet.vscode-drawio", // Draw.io插件
     "nopeslide.vscode-drawio-plugin-mermaid", // Draw.io插入mermaid的插件
     "pomdtr.excalidraw-editor", //Excalidraw 插件

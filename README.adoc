@@ -42,6 +42,11 @@ image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
 
 == 默认配置的 `VScode` 插件
 
+- `Asciidoc` 插件 `asciidoctor.asciidoctor-vscode`
+- `Draw.io`插件 `hediet.vscode-drawio`
+- `Draw.io`插入`mermaid`的插件 `nopeslide.vscode-drawio-plugin-mermaid`
+- `Excalidraw` 插件 `pomdtr.excalidraw-editor`
+- `PlantUML`插件 `jebbs.plantuml`
 
 == `AsciiDoc` 语法
 
