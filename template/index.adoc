@@ -1,0 +1,124 @@
+:doctitle: AsciiDoc 指引
+:home: https://athang.gitee.io/
+:assets: {home}/assets
+:image: {assets}/images
+:video: {assets}/videos
+:stylesheets: {home}/docs/asciidoc/stylesheets
+:stylesheets_previews: {home}/docs/asciidoc/previews
+:experimental:
+:icons: font
+// :source-highlighter: highlightjs
+:source-highlighter: pygments
+:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引
+
+= {doctitle}
+:author: hang
+:email: hhhangcc@qq.com
+:revnumber: 1.0.0
+:revdate: 2024.1.20
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+
+== 简介
+
+link:https://en.wikipedia.org/wiki/Lightweight_markup_language[轻量级的标记语言已经有很多]，例如我用来写博客的 `Markdown` 就是目前十分流行的一种轻量级标记语言，包括 `Github`、`StackOverflow` 等很多网站以及个人都在使用。
+
+=== Markdown 还不够吗
+
+`Markdown` 语法简洁，即便阅读未经渲染的源文件也有不错的可读性。但它对于较为复杂的格式例如表格的支持始终遭人诟病，许多网站使用各自不同的扩展语法来实现，也从而导致了各种方言的滋生。这也是为何会出现 link:https://blog.codinghorror.com/standard-flavored-markdown/[Standard Markdown] 项目的原因，虽然因为种种原因又更名为 link:https://blog.codinghorror.com/standard-flavored-markdown/[Common Markdown]，然而整个 `Markdown` 社区依然缺乏创建者的支持，`Common Markdown` 也很可能沦为另一个方言。
+
+image::{image}/posts/content/md_standards.png[title="Markdown Standards"]
+
+=== 为什么选择 AsciiDoc
+
+emoji:heart[]
+
+第一次接触到 AsciiDoc 是通过 `O'Reilly` 的图书，`Atlas` 的推荐语言就是 `AsciiDoc`。那么十多种标记语言中，为什么要选择 `AsciiDoc` 呢？其实在选择另一种标记语言时，我做过一些简单的研究:
+
+* **LaTex :** 大名鼎鼎的 `LaTex` 是除了 `Markdown` 之外我第一个投入精力学习的标记语言。不得不说 `LaTex` 十分强大，但与这份强大伴随而来则是复杂的语法，导致了写作过程的枯燥，也让我失去了对 `LaTex` 的兴趣。
+
+* **reStructuredText :** `REST` 也是一种松散的文本结构，功能也较为全面，但书写起来更像是在写 `Python。`
+
+* **Org mode :** 我想基本上只有 `Emacs` 社区的人在使用了吧。
+
+* **Texy!，BBCode，Creole，Textile... :** 事实上大部分轻量级的标记语言语法都较为类似，所以这场抉择很大程度上是使用范围、功能、兼容性、扩展性等多方面的比赛，这也是我为什么不选择这些语言的原因。
+
+=== AsciiDoc 与 Markdown
+
+`AsciiDoc` 的语法与 `Markdown` 十分类似，在学会 `Markdown` 的前提下很容易转向 `AsciiDoc` 阵营。
+
+在的功能方面，前面已经说过许多功能 `Markdown` 要通过扩展语法和 `HTML` 来实现，前者直接导致了通用性的缺失，后者提高了后期编撰的成本，而 AsciiDoc 的学习成本也远不及多学一门 `HTML` 甚至多种扩展语法。
+
+`AsciiDoc` 原生支持的特性就足以应付大多数电子文档的编撰需求，你可以使用标准的 `AsciiDoc` 语法为你的文档添加作者信息、版本信息、表格等特性，它还支持文档引入、自定义块语法等功能。
+
+
+include::../template/basics.adoc[]
+
+== 工具
+
+=== AsciidocFX
+
+https://github.com/asciidocfx/AsciidocFX[`AsciidocFX`] 是一款开源 GUI 编辑器。
+
+image::https://github.com/asciidocfx/AsciidocFX/raw/master/images/asciidocfx.png[title="AsciidocFX"]
+
+=== Atom
+
+来自 Github 的 https://atom.io/[`Atom`], 需要额外安装插件。
+
+image::https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/index-ide-screenshot-26fbe099e63e84c16a2a690e9de2b923.png[title="Atom"]
+
+=== AsciiDoctor
+
+link:https://asciidoctor.org[`AsciiDocor`] 是一个使用 `Ruby` 实现的 `AsciiDoc` 转换工具。你可以通过 `gem install asciidoctor` 进行安装。
+
+[source, console, subs="verbatim"]
+....
+asciidoctor MyDoc.adoc
+
+asciidoctor -a stylesheet golo.css -o MyHTML.html MyDoc.adoc
+....
+
+image::https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/screenshot.png[title="AsciiDoctor"]
+
+=== AsciiDoctor.js Live Editor
+
+link:https://picsew.cn/asciidoctor/[AsciiDoctor.js Live Editor]
+
+=== AsciiDoc Live
+
+link:https://asciidoclive.com/[AsciiDoc Live]
+
+== Stylesheets
+
+* link:{stylesheets}/asciidoctor.css[asciidoctor.css]: link:{stylesheets_previews}/asciidoctor.html[(预览)]
+* link:{stylesheets}/colony.css[colony.css]: link:{stylesheets_previews}/colony.html[(预览)]
+* link:{stylesheets}/foundation-lime.css[foundation-lime.css]: link:{stylesheets_previews}/foundation-lime.html[(预览)]
+* link:{stylesheets}/foundation-potion.css[foundation-potion.css]: link:{stylesheets_previews}/foundation-potion.html[(预览)]
+* link:{stylesheets}/foundation.css[foundation.css]: link:{stylesheets_previews}/foundation.html[(预览)]
+* link:{stylesheets}/github.css[github.css]: link:{stylesheets_previews}/github.html[(预览)]
+* link:{stylesheets}/golo.css[golo.css]: link:{stylesheets_previews}/golo.html[(预览)]
+* link:{stylesheets}/iconic.css[iconic.css]: link:{stylesheets_previews}/iconic.html[(预览)]
+* link:{stylesheets}/maker.css[maker.css]: link:{stylesheets_previews}/maker.html[(预览)]
+* link:{stylesheets}/readthedocs.css[readthedocs.css]: link:{stylesheets_previews}/readthedocs.html[(预览)]
+* link:{stylesheets}/riak.css[riak.css]: link:{stylesheets_previews}/riak.html[(预览)]
+* link:{stylesheets}/rocket-panda.css[rocket-panda.css]: link:{stylesheets_previews}/rocket-panda.html[(预览)]
+* link:{stylesheets}/rubygems.css[rubygems.css]: link:{stylesheets_previews}/rubygems.html[(预览)]
+* link:{stylesheets}/boot-darkly.css[boot-darkly.css]: link:{stylesheets_previews}/boot-darkly.html[(预览)]
+
+== 关于
+
+****
+- **标题**: link:{home}/asciidoc[《{doctitle}》]
+- **作者**: link:{home}/about/[{author}]
+- **版本**: {revnumber}
+- **链接**: {home}/asciidoc
+- **更多**: link:{home}/docs/asciidoc/full.html[Full Documents]
+****

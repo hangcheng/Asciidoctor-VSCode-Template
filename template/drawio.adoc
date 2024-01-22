@@ -1,0 +1,5 @@
+:home: ./
+:image: ./
+==== `Draw.io`示例
+
+image::./drawio/demo.drawio.svg[]

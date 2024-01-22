@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "asciidoctor.asciidoctor-vscode", // Markdown 预览增强
+    "hediet.vscode-drawio", // Draw.io插件
+    "nopeslide.vscode-drawio-plugin-mermaid", // Draw.io插入mermaid的插件
+    "pomdtr.excalidraw-editor", //Excalidraw 插件
+    "jebbs.plantuml", //PlantUML插件
+  ]
+}

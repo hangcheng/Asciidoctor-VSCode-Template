@@ -1,0 +1,66 @@
+:doctitle: AsciiDoc 指引
+:home: ./
+:assets: {home}/assets
+:image: {assets}/images
+:video: {assets}/videos
+:stylesheets: {home}/docs/asciidoc/stylesheets
+:stylesheets_previews: {home}/docs/asciidoc/previews
+:experimental:
+:icons: font
+// :source-highlighter: highlightjs
+:source-highlighter: pygments
+:doctype: book
+:page-layout!:
+:sectanchors:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 6
+:toc-title: 索引
+
+= {doctitle}
+:author: hang
+:email: hhhangcc@qq.com
+:revnumber: 1.0.0
+:revdate: 2024.1.20
+:revremark: The first incarnation of {doctitle}
+:version-label!:
+
+== 语法
+
+include::./template/basics.adoc[]
+
+
+== 数学
+
+include::./template/math.adoc[]
+
+== 图表
+
+=== `Draw.io`
+
+include::./template/drawio.adoc[]
+
+=== `Excalidraw`
+
+include::./template/excalidraw.adoc[]
+
+=== `PlantUML`
+
+include::./template/plantuml.adoc[]
+
+=== `Mermaid`
+
+include::./template/mermaid.adoc[]
+
+=== `WaveDrom`
+
+include::./template/wavedrom.adoc[]
+
+=== `GraphViz`
+
+include::./template/graphViz.adoc[]
+
+=== `Vega` 和 `Vega-lite`
+
+include::./template/vega.adoc[]
